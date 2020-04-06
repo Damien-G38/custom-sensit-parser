@@ -1,0 +1,29 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:bus="http://ws.praxedo.com/v6/businessEvent">
+    <soap:Header/>
+    <soap:Body>
+        <bus:createEvents>
+            <events>
+                <annotations>
+                    <author>Damien</author>
+                    <note>Event test</note>
+                </annotations>
+                <message>Créé par un alerte Grafana</message>
+                <coreData>
+                    <anomaly>true</anomaly>
+                    <description>Sensor detection</description>
+                    <referentialData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="bus:externalReferentialData">
+                        <customerName>Fake Customer</customerName>
+                        <location>
+                            <address>Fake address</address>
+                            <city>Fake city</city>
+                            <contact>Fake Contact</contact>
+                            <description>Fake description</description>
+                            <name>Fake name</name>
+                            <zipCode>75000</zipCode>
+                        </location>
+                    </referentialData>
+                </coreData>
+            </events>
+        </bus:createEvents>
+    </soap:Body>
+</soap:Envelope>
